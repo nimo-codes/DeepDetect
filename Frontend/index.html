@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>DeepDetect</title>
+     
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+                        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/style.css" rel="stylesheet">      
+
+    </head>
+    
+    <body id="top">
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="svg/Logo.svg" class="img-fluid" style="max-width: 250px; max-height: 50px;" alt="Image">
+                        <span>Deep<span class="lol">Detect</span></span>
+                    </a>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto ">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_1">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_2">Applications</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_1">Image</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_v">Video</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_a">Audio</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+
+            <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 mx-auto mt-5 mb-5">
+                            <h1 class="text-white text-center">Upload. Verify. Detect</h1>
+
+                            <h6 class="text-center">Detect and Verify the authenticity of media content</h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+ 
+
+            <section class="featured-section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 col-12 mb-5">
+                            <div class="custom-block custom-block-overlay">
+                                <div class="d-flex flex-column h-100">
+                                    <img src="images/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid" alt="">
+                                
+                                    <div class="custom-block-overlay-text d-flex flex-column align-items-center">
+                                        <input type="file" id="upload-button" multiple accept="image/*" />
+                                        <label for="upload-button">
+                                            <i class="fa-solid fa-upload"></i>&nbsp; Choose Or Drop Photos
+                                        </label>
+                                        <div>
+                                            <div id="error"></div>
+                                            <div id="image-display"></div>
+                                        </div>
+                                    </div>
+                                    <div class="section-overlay"></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12 mb-5">
+                            <div class="custom-block bg-white shadow-lg">
+                                Result
+                                <!-- kmelnrvnefnrkrkemrnkjr gk lsmdsakmvslmlfseobmepmebmepbmrebmekvmekbmekvekvmekvmd -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="explore-section section-padding" id="section_2">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12 text-center">
+                            <h2 class="mb-4">Applications</h1>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="design-tab" data-bs-toggle="tab" data-bs-target="#design-tab-pane" type="button" role="tab" aria-controls="design-tab-pane" aria-selected="true">Journalism</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="marketing-tab" data-bs-toggle="tab" data-bs-target="#marketing-tab-pane" type="button" role="tab" aria-controls="marketing-tab-pane" aria-selected="false">Law and Forensics</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance-tab-pane" type="button" role="tab" aria-controls="finance-tab-pane" aria-selected="false">Social Media</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music-tab-pane" type="button" role="tab" aria-controls="music-tab-pane" aria-selected="false">Music Industry</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education-tab-pane" type="button" role="tab" aria-controls="education-tab-pane" aria-selected="false">Research</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Content Verification</h5>
+
+                                                            <p class="mb-0">Safeguards the integrity of media content by verifying its authenticity, ensuring only genuine material reaches the public, bolstering trust in news sources.</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Combat Misinformation</h5>
+
+                                                                <p class="mb-0">Combat misinformation by detecting and flagging manipulated media content, safeguarding journalistic integrity and promoting informed discourse.</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Maintain Trust</h5>
+
+                                                                <p class="mb-0">Preserves media integrity, ensuring authentic content dissemination to bolster trust and credibility in news sources.</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <img src="images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="marketing-tab-pane" role="tabpanel" aria-labelledby="marketing-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                                <div class="custom-block bg-white shadow-lg">
+                                                    <a href="topics-detail.html">
+                                                        <div class="d-flex">
+                                                            <div>
+                                                                <h5 class="mb-2">Digital Evidence Authentication</h5>
+
+                                                                <p class="mb-0">Utilized by law enforcement agencies to verify the authenticity of digital evidence</p>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <img src="images/topics/undraw_online_ad_re_ol62.png" class="custom-block-image img-fluid" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                                <div class="custom-block bg-white shadow-lg">
+                                                    <a href="topics-detail.html">
+                                                        <div class="d-flex">
+                                                            <div>
+                                                                <h5 class="mb-2">Effective Prosecution</h5>
+
+                                                                <p class="mb-0">Enhance the effectiveness of prosecution efforts</p>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <img src="images/topics/undraw_Group_video_re_btu7.png" class="custom-block-image img-fluid" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 col-md-6 col-12">
+                                                <div class="custom-block bg-white shadow-lg">
+                                                    <a href="topics-detail.html">
+                                                        <div class="d-flex">
+                                                            <div>
+                                                                <h5 class="mb-2">Enhanced Judicial Proceedings</h5>
+
+                                                                <p class="mb-0">Contributes to streamlining judicial proceedings by providing reliable and verifiable evidence</p>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <img src="images/topics/undraw_viral_tweet_gndb.png" class="custom-block-image img-fluid" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                  </div>
+
+                                <div class="tab-pane fade" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">   <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Digital Evidence Authentication</h5>
+
+                                                            <p class="mb-0">Pivotal in verifying the authenticity of digital evidence, such as videos and audio recordings, ensuring its integrity and reliability for investigative purposes.</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Finance_re_gnv2.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="custom-block custom-block-overlay">
+                                                <div class="d-flex flex-column h-100">
+                                                    <img src="images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg" class="custom-block-image img-fluid" alt="">
+
+                                                    <div class="custom-block-overlay-text d-flex">
+                                                        <div>
+                                                            <h5 class="text-white mb-2">Criminal Investigation Support</h5>
+
+                                                            <p class="text-white">Utilizing anti-deepfake tools aids law enforcement in conducting thorough and accurate investigations, enabling them to uncover and analyze digital evidence effectively, thus facilitating the apprehension of perpetrators and ensuring justice is served.</p>
+
+                                                            <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Try it out</a>
+                                                        </div>
+
+                                                    </div>
+
+                                                    
+                                                    <div class="section-overlay"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="music-tab-pane" role="tabpanel" aria-labelledby="music-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Audio Content Verification</h5>
+
+                                                            <p class="mb-0">Verifying the authenticity of audio recordings, such as voice messages, phone calls, or audio clips used in entertainment media.</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Compose_music_re_wpiw.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Protection Against Voice Manipulation</h5>
+
+                                                            <p class="mb-0">protect against voice manipulation by detecting attempts to alter or impersonate voices.</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_happy_music_g6wc.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Prevention of Dubious Soundtracks or Narrations</h5>
+
+                                                            <p class="mb-0">This safeguards the credibility of audio-based entertainment and enhances the viewer or listener experience.</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Podcast_audience_re_4i5q.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="education-tab-pane" role="tabpanel" aria-labelledby="education-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Advancement of Detection Methods</h5>
+
+                                                            <p class="mb-0">Researchers in academia can leverage anti-audio deepfake tools to develop and refine detection methods aimed at identifying manipulated or synthetic audio content.</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Graduation_re_gthn.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Education and Awareness</h5>
+
+                                                            <p class="mb-0">Providing students with hands-on experience in detecting and analyzing audio deepfakes</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Educator_re_ju47.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+<footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-12 mb-4 pb-2">
+                        <a class="navbar-brand mb-2" href="index.html">
+                        <img src="svg/Logo.svg" class="img-fluid" style="max-width: 250px; max-height: 50px;" alt="Image">
+                            <span>DeepDetect</span>
+                        </a>
+                    </div>
+
+                    <!-- <div class="col-lg-3 col-md-4 col-6">
+                        <h6 class="site-footer-title mb-3">Made By</h6>
+
+                        <ul class="site-footer-links ">
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Mridul Mehra</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Naman Nanda</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Sarah Anjum</a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div> -->
+
+                </div>
+            </div>
+        </footer>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
