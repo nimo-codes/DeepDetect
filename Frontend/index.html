@@ -22,6 +22,34 @@
         <link href="css/style.css" rel="stylesheet">      
 
     </head>
+    <script>
+    const sendRequest = async (event) => {
+                event.preventDefault();
+                const formData = new FormData();
+                const files = document.getElementById('upload-button').files;
+
+                for (let i = 0; i < files.length; i++) {
+                    formData.append('files', files[i]);
+                }
+
+                try {
+                    const response = await fetch('http://127.0.0.1:8000/api/v1/healthcheck', {
+                        method: 'POST',
+                        body: formData,
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        console.log(data);
+                    } else {
+                        console.error('Error:', response.statusText);
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            };
+    </script>
+    
     
     <body id="top">
 
@@ -88,13 +116,19 @@
                                     <img src="images/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid" alt="">
                                 
                                     <div class="custom-block-overlay-text d-flex flex-column align-items-center">
-                                        <input type="file" id="upload-button" multiple accept="image/*" />
-                                        <label for="upload-button">
-                                            <i class="fa-solid fa-upload"></i>&nbsp; Choose Or Drop Photos
-                                        </label>
-                                        <div>
-                                            <div id="error"></div>
-                                            <div id="image-display"></div>
+                                        <form onsubmit="sendRequest(event)">
+                                            <input type="file" id="upload-button" multiple accept="image/*" />
+                                            <label for="upload-button">
+                                                <i class="fa-solid fa-upload"></i>&nbsp; Choose Or Drop Photos
+                                            </label>
+                                            <div>
+                                                <div id="error"></div>
+                                                <div id="image-display"></div>
+                                                <!-- restyle it lmao -->
+                                                <div class="" style="display: flex;justify-content: center;align-items:center;">
+                                                    <button type="submit" class="upload-button">Test</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                     <div class="section-overlay"></div>
