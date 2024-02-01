@@ -4,80 +4,83 @@ let fileName = document.getElementById("file-name");
 let container = document.querySelector(".container");
 let error = document.getElementById("error");
 let imageDisplay = document.getElementById("image-display");
+const apiUploadButton = document.querySelector(".upload-button");
+apiUploadButton.style.display = "none"; // Change from "hidden" to "none"
 
 const fileHandler = (file, name, type) => {
-    if (type.split("/")[0] !== "image") {
-      //File Type Error
-      error.innerText = "Please upload an image file";
-      return false;
-    }
-    error.innerText = "";
-    let reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onloadend = () => {
-      //image and file name
-      let imageContainer = document.createElement("figure");
-      let img = document.createElement("img");
-      img.src = reader.result;
-      imageContainer.appendChild(img);
-      imageContainer.innerHTML += `<figcaption>${name}</figcaption>`;
-      imageDisplay.appendChild(imageContainer);
-    };
+  if (type.split("/")[0] !== "image") {
+    //File Type Error
+    error.innerText = "Please upload an image file";
+    return false;
+  }
+  error.innerText = "";
+  let reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onloadend = () => {
+    //image and file name
+    let imageContainer = document.createElement("figure");
+    let img = document.createElement("img");
+    img.src = reader.result;
+    imageContainer.appendChild(img);
+    imageContainer.innerHTML += `<figcaption>${name}</figcaption>`;
+    imageDisplay.appendChild(imageContainer);
+    apiUploadButton.style.display = "block";
   };
+};
 
 uploadButton.addEventListener("change", () => {
+  imageDisplay.innerHTML = "";
+  Array.from(uploadButton.files).forEach((file) => {
+    fileHandler(file, file.name, file.type);
+  });
+});
+
+container.addEventListener(
+  "dragenter",
+  (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    container.classList.add("active");
+  },
+  false
+);
+
+container.addEventListener(
+  "dragleave",
+  (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    container.classList.remove("active");
+  },
+  false
+);
+
+container.addEventListener(
+  "dragover",
+  (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    container.classList.add("active");
+  },
+  false
+);
+
+container.addEventListener(
+  "drop",
+  (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    container.classList.remove("active");
+    let draggedData = e.dataTransfer;
+    let files = draggedData.files;
     imageDisplay.innerHTML = "";
-    Array.from(uploadButton.files).forEach((file) => {
+    Array.from(files).forEach((file) => {
       fileHandler(file, file.name, file.type);
     });
-  });
-
-container.addEventListener(
-    "dragenter",
-    (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        container.classList.add("active");
-    },
-    false
-);
-
-container.addEventListener(
-    "dragleave",
-    (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      container.classList.remove("active");
-    },
-    false
-);
-
-container.addEventListener(
-    "dragover",
-    (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      container.classList.add("active");
-    },
-    false
-);
-
-container.addEventListener(
-    "drop",
-    (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      container.classList.remove("active");
-      let draggedData = e.dataTransfer;
-      let files = draggedData.files;
-      imageDisplay.innerHTML = "";
-      Array.from(files).forEach((file) => {
-        fileHandler(file, file.name, file.type);
-      });
-    },
-    false
+  },
+  false
 );
 
 window.onload = () => {
-    error.innerText = "";
+  error.innerText = "";
 };
